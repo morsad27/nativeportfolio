@@ -31,13 +31,13 @@ export default function TabLayout() {
           name="index"
           options={{
             headerShown: false,
-            title: "Home",
+            title: "Profile",
             tabBarIcon: ({ color }) => (
-              <Foundation name="home" size={24} color={color} />
+              <FontAwesome size={28} name="user" color={color} />
             ),
           }}
         />
-        <Tabs.Screen
+        {/* <Tabs.Screen
           name="profile"
           options={{
             headerShown: false,
@@ -46,7 +46,7 @@ export default function TabLayout() {
               <FontAwesome size={28} name="user" color={color} />
             ),
           }}
-        />
+        /> */}
         <Tabs.Screen
           name="projects"
           options={{
