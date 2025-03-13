@@ -144,7 +144,7 @@ import {
           <View style={styles.flexrow}>
             <Image
               style={[isDarkMode ? styles.abouticonDark : styles.abouticon]}
-            //   source={icons.circleoOutline}
+               source={require("../../assets/images/circle-outline.png")}
             />
             <Text style={[isDarkMode ? styles.lowsubtitleDark : styles.lowsubtitle]}>
               IT Intern
@@ -153,7 +153,7 @@ import {
           <View style={styles.flexrow}>
             <Image
               style={[isDarkMode ? styles.lineiconDark : styles.lineicon]}
-            //   source={icons.line}
+              source={require("../../assets/images/line.png")}
             />
             <Text
               style={[
@@ -166,7 +166,7 @@ import {
           <View style={styles.flexrow}>
             <Image
               style={[isDarkMode ? styles.blackiconDark : styles.blackicon]}
-            //   source={icons.circleDark}
+              source={require("../../assets/images/circle-dark.png")}
             />
             <View style={styles.flexcolumn}>
               <Text
