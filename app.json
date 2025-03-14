@@ -3,7 +3,7 @@
     "name": "nativeportfolio",
     "slug": "nativeportfolio",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/avatar.jpg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
