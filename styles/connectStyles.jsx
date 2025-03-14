@@ -186,7 +186,7 @@ export default StyleSheet.create({
     position: "absolute",
     width: 20,
     height: 20,
-    left: 5, // Adjust position on switch
+    left: 5,
     top: "50%",
     transform: [{ translateY: -10 }],
   },
@@ -202,11 +202,11 @@ export default StyleSheet.create({
   },
   switchIconOn: {
     top: 3,
-    left: 32, // Adjust this value based on your thumb position
+    left: 32, 
   },
   switchIconOff: {
     top: 3,
-    left: 3, // Adjust this value based on your thumb position
+    left: 3, 
   },
   switch: {
     width: 49,
