@@ -3,6 +3,7 @@ import { Dimensions, StyleSheet } from "react-native";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
+const isTablet = windowWidth > 600;
 export default StyleSheet.create({
   maincontainer: {
     padding: 10,

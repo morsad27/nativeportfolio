@@ -12,7 +12,7 @@ import {
 import styles from "../../styles/connectStyles";
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
-import { useTheme } from "../../constants/themeManager"
+import { useTheme } from "../../constants/themeManager";
 const Connect = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -58,14 +58,14 @@ const Connect = () => {
   const openEmailPakir = () => {
     Linking.openURL(
       "https://mail.google.com/mail/?view=cm&fs=1&to=michaellpakir@gmail.com"
-    )
-  }
+    );
+  };
 
   const openEmailGamba = () => {
     Linking.openURL(
       "https://mail.google.com/mail/?view=cm&fs=1&to=joelgamba04@gmail.com"
-    )
-  }
+    );
+  };
   return (
     <ScrollView style={[isDarkMode ? styles.safeAreaDark : styles.safeArea]}>
       <View style={styles.submain}>
@@ -127,7 +127,11 @@ const Connect = () => {
               {errorMessage}
             </Text>
           ) : null}
-          <Button title="Submit" onPress={onSubmit} />
+          <TouchableOpacity onPress={onSubmit}>
+            <Text style={styles.submit}>
+              Submit
+            </Text>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.about}>
@@ -227,16 +231,20 @@ const Connect = () => {
             <Text style={[isDarkMode ? styles.subtextDark : styles.subtext]}>
               09293121202
             </Text>
-            
-          <TouchableOpacity onPress={() => openEmailGamba()}>
-            <View
-              style={[isDarkMode ? styles.emailButtonDark : styles.emailButton]}
-            >
-              <Text style={[isDarkMode ? styles.emailDark : styles.emailtext]}>
-                Send Email
-              </Text>
-            </View>
-          </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => openEmailGamba()}>
+              <View
+                style={[
+                  isDarkMode ? styles.emailButtonDark : styles.emailButton,
+                ]}
+              >
+                <Text
+                  style={[isDarkMode ? styles.emailtextDark : styles.emailtext]}
+                >
+                  Send Email
+                </Text>
+              </View>
+            </TouchableOpacity>
           </View>
           <View
             style={[
@@ -261,16 +269,20 @@ const Connect = () => {
             {/* <Text style={[isDarkMode ? styles.subtextDark : styles.subtext]}>
               michaellpakir@gmail.com
             </Text> */}
-            
-          <TouchableOpacity onPress={() => openEmailPakir()}>
-            <View
-              style={[isDarkMode ? styles.emailButtonDark : styles.emailButton]}
-            >
-              <Text style={[isDarkMode ? styles.emailDark : styles.emailtext]}>
-                Send Email
-              </Text>
-            </View>
-          </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => openEmailPakir()}>
+              <View
+                style={[
+                  isDarkMode ? styles.emailButtonDark : styles.emailButton,
+                ]}
+              >
+                <Text
+                  style={[isDarkMode ? styles.emailtextDark : styles.emailtext]}
+                >
+                  Send Email
+                </Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
