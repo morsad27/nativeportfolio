@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "../../styles/projectStyles";
 import * as Linking from "expo-linking";
 import { useTheme } from "../../constants/themeManager";
-
+import Avatar from "../../components/avatar"
 const Project = () => {
   const { theme } = useTheme(); // Get global theme
   const isDarkMode = theme === "dark";
@@ -58,7 +58,7 @@ const Project = () => {
             </Pressable>
           </View>
 
-          <View style={styles.gridContainer2}>
+          <View>
             <Pressable
               style={[
                 isDarkMode
@@ -79,39 +79,45 @@ const Project = () => {
               </Text>
             </Pressable>
           </View>
-        </View>
 
-        {/* Certificates Section */}
-        <View style={[isDarkMode ? styles.containerDark2 : styles.container2]}>
-          <View style={styles.about}>
-            <Text style={[isDarkMode ? styles.titleDark : styles.title]}>
-              Certificates
-            </Text>
-          </View>
-
-          {/* Certificate List */}
-          <View style={styles.gridContainer2}>
-            <Pressable
-              style={[
-                isDarkMode
-                  ? styles.projectContainerDark
-                  : styles.projectContainer,
-              ]}
-              onPress={() =>
-                openCertificate(require("../../assets/images/certificate1.png"))
-              }
-            >
-              <Image
-                source={require("../../assets/images/certificate1.png")}
-                style={styles.projectImage}
-              />
+          {/* Certificates Section */}
+          <View
+            style={[isDarkMode ? styles.container2Dark : styles.container2]}
+          >
+            <View style={styles.about}>
               <Text style={[isDarkMode ? styles.titleDark : styles.title]}>
-                HTML Fundamentals
+                Certificates
               </Text>
-              <Text style={[isDarkMode ? styles.subtextDark : styles.subtext]}>
-                CodeCred
-              </Text>
-            </Pressable>
+            </View>
+
+            {/* Certificate List */}
+            <View >
+              <Pressable
+                style={[
+                  isDarkMode
+                    ? styles.projectContainerDark
+                    : styles.projectContainer,
+                ]}
+                onPress={() =>
+                  openCertificate(
+                    require("../../assets/images/certificate1.png")
+                  )
+                }
+              >
+                <Image
+                  source={require("../../assets/images/certificate1.png")}
+                  style={styles.projectImage}
+                />
+                <Text style={[isDarkMode ? styles.titleDark : styles.title]}>
+                  HTML Fundamentals
+                </Text>
+                <Text
+                  style={[isDarkMode ? styles.subtextDark : styles.subtext]}
+                >
+                  CodeCred
+                </Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       </ScrollView>

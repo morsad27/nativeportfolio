@@ -1,4 +1,8 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+
+const windowWidth = Dimensions.get("window").width;
+
+const isTablet = windowWidth > 600;
 
 export default StyleSheet.create({
   // connect styless
@@ -7,20 +11,21 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     padding: 12,
-    marginBottom: '8%',
     marginTop: -1,
+    paddingBottom: isTablet ? "10%" : "20%",
   },
   safeAreaDark: {
     flex: 1,
     backgroundColor: "#000",
     padding: 12,
-    marginBottom: '8%',
     marginTop: -1,
+    paddingBottom: isTablet ? "10%" : "20%",
   },
-  flexend:{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+  flexend: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   container: {
     margin: 5,
@@ -37,9 +42,9 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 15,
     gap: 10,
-    borderColor: "#06f"
+    borderColor: "#06f",
   },
-  
+
   container1: {
     margin: 5,
     padding: 15,
@@ -55,9 +60,9 @@ export default StyleSheet.create({
     gap: 10,
     borderColor: "#06f",
   },
-  
+
   container2: {
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: -10,
     margin: 0,
     padding: 15,
@@ -108,7 +113,7 @@ export default StyleSheet.create({
     borderWidth: 2,
     paddingHorizontal: 80,
     minWidth: 80,
-    borderColor: "#06f"
+    borderColor: "#06f",
   },
   about: {
     display: "flex",
@@ -119,16 +124,16 @@ export default StyleSheet.create({
   },
   abouticon1: {
     borderRadius: 60,
-    height: 35,
-    width: 35,
+    height: isTablet ? 70 : 35,
+    width: isTablet ? 70 : 35,
   },
   abouticon: {
-    height: 35,
-    width: 35,
+    height: isTablet ? 70 : 35,
+    width: isTablet ? 70 : 35,
   },
   socialicon: {
-    height: 55,
-    width: 55,
+    height: isTablet ? 110 : 55,
+    width: isTablet ? 110 : 55,
   },
   arrowicon: {
     height: 20,
@@ -136,49 +141,57 @@ export default StyleSheet.create({
   },
   subtext: {
     fontWeight: "300",
-    fontSize: 18,
-    color: "#000"
+    fontSize: isTablet ? 36 : 18,
+    color: "#000",
   },
   subtextDark: {
     fontWeight: "300",
-    fontSize: 18,
-    color: "#fff"
+    fontSize: isTablet ? 36 : 18,
+    color: "#fff",
+  },
+  submit:{
+    alignSelf: 'center',
+    fontSize: isTablet ? 32 : 16,
+    color: "#06f",
   },
   subtextitalic: {
     fontWeight: "300",
-    fontSize: 18,
-    fontStyle: 'italic'
+    fontSize: isTablet ? 36 : 18,
+    fontStyle: "italic",
   },
   subtextitalicDark: {
     fontWeight: "300",
-    fontSize: 18,
-    fontStyle: 'italic',
-    color: "#fff"
+    fontSize: isTablet ? 36 : 18,
+    fontStyle: "italic",
+    color: "#fff",
   },
-  submain: { paddingBottom: 30, alignSelf: "center", paddingTop: 10 },
+  submain: {
+    paddingHorizontal: isTablet ? "20%" : "10%",
+    paddingTop: 10,
+  },
   lowsubtext: {
     fontWeight: "300",
     fontSize: 16,
   },
   title: {
     fontWeight: "500",
-    fontSize: 22,
+    fontSize: isTablet ? 44 : 22,
   },
   titleDark: {
     fontWeight: "500",
-    fontSize: 22,
-    color: "#fff"
+    fontSize: isTablet ? 44 : 22,
+    color: "#fff",
   },
   subtitle: {
     fontWeight: "400",
-    fontSize: 20,
+    fontSize: isTablet ? 40 : 20,
     marginTop: 2,
   },
   subtitleDark: {
     fontWeight: "400",
-    fontSize: 20,
+    fontSize: isTablet ? 40 : 20,
     marginTop: 2,
-    color: "#fff"
+    color: "#fff",
   },
 
   // for animation (optional)
@@ -186,7 +199,7 @@ export default StyleSheet.create({
     position: "absolute",
     width: 20,
     height: 20,
-    left: 5, // Adjust position on switch
+    left: 5,
     top: "50%",
     transform: [{ translateY: -10 }],
   },
@@ -202,11 +215,11 @@ export default StyleSheet.create({
   },
   switchIconOn: {
     top: 3,
-    left: 32, // Adjust this value based on your thumb position
+    left: 32,
   },
   switchIconOff: {
     top: 3,
-    left: 3, // Adjust this value based on your thumb position
+    left: 3,
   },
   switch: {
     width: 49,
@@ -224,7 +237,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderRadius: 60,
     backgroundColor: "#000",
-    borderColor: "#fff"
+    borderColor: "#fff",
   },
   emailButton: {
     flexDirection: "row",
@@ -259,11 +272,11 @@ export default StyleSheet.create({
   emailtext: {
     color: "#FFF",
     fontWeight: 300,
-    fontSize: 14,
+    fontSize: isTablet ? 22 : 14,
   },
   emailtextDark: {
     color: "#000",
     fontWeight: 300,
-    fontSize: 14,
+    fontSize: isTablet ? 22 : 14,
   },
 });
