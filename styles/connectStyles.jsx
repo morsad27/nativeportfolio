@@ -12,14 +12,14 @@ export default StyleSheet.create({
     backgroundColor: "#fff",
     padding: 12,
     marginTop: -1,
-    paddingBottom: isTablet ? "10%" : "10%",
+    paddingBottom: isTablet ? "10%" : "20%",
   },
   safeAreaDark: {
     flex: 1,
     backgroundColor: "#000",
     padding: 12,
     marginTop: -1,
-    paddingBottom: isTablet ? "10%" : "10%",
+    paddingBottom: isTablet ? "10%" : "20%",
   },
 
   flexend: {
