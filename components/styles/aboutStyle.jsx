@@ -1,7 +1,42 @@
 import { Dimensions, StyleSheet } from "react-native";
 
 const windowWidth = Dimensions.get("window").width;
-const windowHeight = Dimensions.get("window").height;
+
+const isTablet = windowWidth > 600;
+
+const containerMargin = isTablet ? "20%" : "5%";
+const fontSizeLarge = isTablet ? 28 : 20;
+const fontSizeMedium = isTablet ? 27 : 17;
+const fontWeightTitle = isTablet ? "700" : "600";
+const fontWeightSubtext = isTablet ? "500" : "400";
+
+// container standard
+const containerBase = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  marginHorizontal: containerMargin,
+  padding: 15,
+  borderWidth: 1,
+  flexDirection: "column",
+  paddingVertical: 15,
+  minHeight: 60,
+};
+
+const subtextBase = {
+  flex: 1,
+  paddingHorizontal: 10,
+  fontWeight: fontWeightSubtext,
+  fontSize: fontSizeMedium,
+  alignSelf: "center",
+  textAlign: "center",
+};
+
+const containerStackBase = {
+  borderWidth: 1,
+  margin: 5,
+  borderRadius: 20,
+};
 
 export default StyleSheet.create({
   maincontainer: {
@@ -10,69 +45,37 @@ export default StyleSheet.create({
   },
 
   container: {
+    ...containerBase,
     marginTop: 40,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: windowWidth > 600 ? "20%" : "5%",
-    padding: 15,
     backgroundColor: "#FFFFFF",
-    borderWidth: 1,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-    minHeight: 60,
-    flexDirection: "column", //vertical
-    paddingVertical: 15,
   },
   containerDark: {
+    ...containerBase,
     marginTop: 40,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: windowWidth > 600 ? "20%" : "5%",
-    padding: 15,
     backgroundColor: "#000",
-    borderWidth: 1,
     borderColor: "#06f",
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
-    minHeight: 60,
-    flexDirection: "column",
-    paddingVertical: 15,
   },
 
   container2: {
+    ...containerBase,
     flex: 1,
     marginTop: 20,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: windowWidth > 600 ? "20%" : "5%",
-    padding: 15,
     backgroundColor: "#FFFFFF",
-    borderWidth: 1,
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
-    minHeight: 60, // Prevents shrinking
-    flexDirection: "column", // Ensure vertical stacking
-    paddingVertical: 15, // Extra space for centering
   },
   container2Dark: {
+    ...containerBase,
     flex: 1,
     marginTop: 20,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: windowWidth > 600 ? "20%" : "5%",
-    padding: 15,
     backgroundColor: "#000",
     borderColor: "#06f",
-    borderWidth: 1,
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
-    minHeight: 60, // Prevents shrinking
-    flexDirection: "column", // Ensure vertical stacking
-    paddingVertical: 15, // Extra space for centering
   },
 
   about: {
@@ -84,32 +87,20 @@ export default StyleSheet.create({
   },
 
   title: {
-    fontWeight: windowWidth > 600 ? 700 : 600,
-    fontSize: windowWidth > 600 ? 28 : 20,
-    gap: 2,
+    fontWeight: fontWeightTitle,
+    fontSize: fontSizeLarge,
   },
   titleDark: {
-    fontWeight: windowWidth > 600 ? 700 : 600,
-    fontSize: windowWidth > 600 ? 28 : 20,
-    gap: 2,
+    fontWeight: fontWeightTitle,
+    fontSize: fontSizeLarge,
     color: "#fff",
   },
 
   subtext: {
-    flex: 1,
-    paddingHorizontal: 10,
-    fontWeight: windowWidth > 600 ? 500 : 400,
-    fontSize: windowWidth > 600 ? 27 : 17,
-    alignSelf: "center",
-    textAlign: "center",
+    ...subtextBase,
   },
   subtextDark: {
-    flex: 1,
-    paddingHorizontal: 10,
-    fontWeight: windowWidth > 600 ? 500 : 400,
-    fontSize: windowWidth > 600 ? 27 : 17,
-    alignSelf: "center",
-    textAlign: "center",
+    ...subtextBase,
     color: "#fff",
   },
 
@@ -117,18 +108,14 @@ export default StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    gap: windowWidth > 600 ? "5%" : 5,
+    gap: isTablet ? "5%" : 5,
   },
-  
+
   containerstack: {
-    borderWidth: 1,
-    margin: 5,
-    borderRadius: 20,
+    ...containerStackBase,
   },
   containerstackDark: {
-    borderWidth: 1,
-    margin: 5,
-    borderRadius: 20,
+    ...containerStackBase,
     borderColor: "#06f",
   },
 });
