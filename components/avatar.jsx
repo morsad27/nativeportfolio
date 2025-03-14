@@ -1,9 +1,7 @@
 import { View, Text, TouchableOpacity, Image, Alert } from "react-native";
 import React from "react";
-import styles from "./styles/avatar";
+import styles from "./styles/avatarStyle";
 import { useTheme } from "../constants/themeManager";
-import * as FileSystem from "expo-file-system";
-import * as Sharing from "expo-sharing";
 import { Linking } from "react-native";
 
 export default function Profile() {
