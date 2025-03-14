@@ -1,23 +1,6 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  
-  safeAreaDark: {
-    flex: 1,
-    backgroundColor: "#fff",
-    padding: 10,
-    backgroundColor: "#000",
-    marginTop: -1
-  },
-  safeArea: {
-    flex: 1,
-    backgroundColor: "#fff",
-    padding: 10,
-    marginTop: -1
-  },
-
-
-  
   row: { margin: 10, gap: 15, flexDirection: "row" },
   flexrow: { display: "flex", flexDirection: "row" },
   container: {
@@ -157,6 +140,19 @@ export default StyleSheet.create({
     gap: 5,
     alignItems: "center",
     justifyContent: "center",
+  },
+  safeAreaDark: {
+    flex: 1,
+    backgroundColor: "#fff",
+    padding: 10,
+    backgroundColor: "#000",
+    marginTop: -1
+  },
+  safeArea: {
+    flex: 1,
+    backgroundColor: "#fff",
+    padding: 10,
+    marginTop: -1
   },
   abouticon: {
     width: 30,
