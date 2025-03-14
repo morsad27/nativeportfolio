@@ -107,29 +107,29 @@ export default StyleSheet.create({
   blackicon: {
     width: windowWidth > 600 ? 30 : 20,
     height: windowWidth > 600 ? 30 : 20,
-    marginTop: windowWidth > 600 ? -22 : -28,
+    marginTop: windowWidth > 600 ? -28 : -28,
     marginLeft: windowWidth > 600 ? 6 : 4,
     tintColor: "#000",
   },
   blackiconDark: {
     width: windowWidth > 600 ? 30 : 20,
     height: windowWidth > 600 ? 30 : 20,
-    marginTop: windowWidth > 600 ? -22 : -28,
+    marginTop: windowWidth > 600 ? -28 : -28,
     marginLeft: windowWidth > 600 ? 6 : 4,
     tintColor: "#06f",
   },
   
   lowsubtitle2: {
-    fontWeight: 500,
-    fontSize: 20,
+    fontWeight: windowWidth > 600 ? 600 : 500,
+    fontSize: windowWidth > 600 ? 28 : 20,
     paddingTop: 10,
-    marginTop: -25,
+    marginTop: -15,
     paddingLeft: 10,
     color: "#000",
   },
   lowsubtitle2Dark: {
-    fontWeight: 500,
-    fontSize: 20,
+    fontWeight: windowWidth > 600 ? 600 : 500,
+    fontSize: windowWidth > 600 ? 28 : 20,
     paddingTop: 10,
     marginTop: -15,
     paddingLeft: 10,
@@ -137,8 +137,8 @@ export default StyleSheet.create({
   },
 
   subExperience2: {
-    fontSize: 16,
-    fontWeight: 400,
+    fontSize: windowWidth > 600 ? 22 : 16,
+    fontWeight: windowWidth > 600 ? 500 : 400,
     paddingLeft: 10,
     color: "#000",
   },

@@ -227,22 +227,11 @@ const Connect = () => {
             <Text style={[isDarkMode ? styles.subtextDark : styles.subtext]}>
               09293121202
             </Text>
-            {/* <Text style={[isDarkMode ? styles.subtextDark : styles.subtext]}>
-              joelgamba04@gmail.com
-            </Text> */}
             
           <TouchableOpacity onPress={() => openEmailGamba()}>
             <View
               style={[isDarkMode ? styles.emailButtonDark : styles.emailButton]}
             >
-              <Image
-                style={styles.smallicon}
-                source={
-                  isDarkMode
-                    ? require("../../assets/images/mail-dark.png")
-                    : require("../../assets/images/mail-light.png")
-                }
-              />
               <Text style={[isDarkMode ? styles.emailDark : styles.emailtext]}>
                 Send Email
               </Text>
@@ -277,14 +266,6 @@ const Connect = () => {
             <View
               style={[isDarkMode ? styles.emailButtonDark : styles.emailButton]}
             >
-              <Image
-                style={styles.smallicon}
-                source={
-                  isDarkMode
-                    ? require("../../assets/images/mail-dark.png")
-                    : require("../../assets/images/mail-light.png")
-                }
-              />
               <Text style={[isDarkMode ? styles.emailDark : styles.emailtext]}>
                 Send Email
               </Text>

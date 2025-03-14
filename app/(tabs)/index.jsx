@@ -22,7 +22,7 @@ const Profile = () => {
       <View style={styles.maincontainer}>
         <Avatar />
         <About />
-        {/* <Experience /> */}
+        <Experience />
       </View>
     </ScrollView>
   );
